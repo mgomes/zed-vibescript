@@ -8,7 +8,7 @@ repository = "https://github.com/mgomes/zed-vibescript"
 
 [grammars.vibescript]
 repository = "https://github.com/mgomes/tree-sitter-vibescript"
-commit = "4937f02cdf504c2134524710ef4d006e5631f876"
+commit = "10232168c7104c232bad8ddcac82bbe33d821207"
 
 [language_servers.vibes-lsp]
 name = "Vibes LSP"
