@@ -1,5 +1,6 @@
 (method) @indent
 (class) @indent
+(module) @indent
 (if) @indent
 (elsif) @indent
 (else) @indent
@@ -10,6 +11,7 @@
 (when) @indent
 (begin) @indent
 (block) @indent
+(lambda) @indent
 "end" @outdent
 "elsif" @outdent
 "else" @outdent
