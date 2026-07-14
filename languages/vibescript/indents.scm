@@ -1,6 +1,7 @@
 (method) @indent
 (class) @indent
 (module) @indent
+(enum) @indent
 (if) @indent
 (elsif) @indent
 (else) @indent
