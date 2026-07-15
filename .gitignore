@@ -1,0 +1,4 @@
+grammars/
+extension.wasm
+Cargo.lock
+target/
