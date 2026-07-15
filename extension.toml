@@ -1,14 +1,14 @@
 id = "vibescript"
 name = "Vibescript"
 description = "Vibescript language support with syntax highlighting and LSP."
-version = "0.0.2"
+version = "0.0.3"
 schema_version = 1
 authors = ["Mauricio Gomes <mauricio@edge14.com>"]
 repository = "https://github.com/mgomes/zed-vibescript"
 
 [grammars.vibescript]
 repository = "https://github.com/mgomes/tree-sitter-vibescript"
-commit = "7453e6a0700568880035ab8b56589d54e9b5dd26"
+commit = "127c551ce24c74112e60face8ba51774ff001bdd"
 
 [language_servers.vibes-lsp]
 name = "Vibes LSP"
