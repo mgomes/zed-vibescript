@@ -12,6 +12,10 @@ args = parser.parse_args()
 grammar = args.grammar.resolve()
 root = Path(__file__).resolve().parent.parent
 
+for name in ("highlights.scm", "injections.scm", "folds.scm", "locals.scm"):
+    if (root / "languages/vibescript" / name).read_bytes() != (grammar / "queries" / name).read_bytes():
+        raise SystemExit(f"{name}: vendored query differs from the grammar checkout")
+
 
 def run_query(query, fixture):
     result = subprocess.run(

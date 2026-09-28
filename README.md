@@ -38,3 +38,7 @@ indentation, folding and outlines.
 Validate a local grammar checkout with `python3 scripts/check-queries.py
 /path/to/tree-sitter-vibescript` after running `npm ci` there. Build the extension
 with `CARGO_BUILD_JOBS=3 cargo build --target wasm32-wasip1`.
+
+The query check also verifies that shared highlighting, injection, folding and
+locals queries match the grammar checkout. The grammar's locals tests cover
+yielded values, splats, shorthand arguments and every direct identifier position.
