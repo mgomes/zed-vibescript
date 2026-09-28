@@ -1,0 +1,12 @@
+type Names = array<
+  string
+>
+
+type Groups = hash<
+  string,
+  array<
+    string
+  >
+>
+
+larger = 2 > 1
