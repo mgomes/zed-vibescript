@@ -1,21 +1,25 @@
-(method) @indent
-(class) @indent
-(module) @indent
-(enum) @indent
-(if) @indent
-(elsif) @indent
-(else) @indent
-(while) @indent
-(until) @indent
-(for) @indent
-(case) @indent
-(when) @indent
-(begin) @indent
-(block) @indent
-(lambda) @indent
-"end" @outdent
-"elsif" @outdent
-"else" @outdent
-"rescue" @outdent
-"ensure" @outdent
-"when" @outdent
+[
+  (method)
+  (class)
+  (module)
+  (enum)
+  (if)
+  (elsif)
+  (else)
+  (while)
+  (for)
+  (case)
+  (when)
+  (begin)
+  (rescue)
+  (ensure)
+  (block)
+  (array)
+  (hash)
+  (type_shape)
+  (type_tuple)
+  (parameters)
+  (type_arguments)
+] @indent
+
+["end" "elsif" "else" "rescue" "ensure" "when" ")" "]" "}"] @outdent

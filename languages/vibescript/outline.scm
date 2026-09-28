@@ -1,6 +1,6 @@
 (class
   "class" @context
-  name: (constant) @name) @item
+  name: (_) @name) @item
 
 (module
   "module" @context
@@ -13,3 +13,7 @@
 (method
   "def" @context
   name: (_) @name) @item
+
+(type_alias
+  "type" @context
+  name: (constant) @name) @item
