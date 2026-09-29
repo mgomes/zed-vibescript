@@ -1,6 +1,6 @@
 # Vibescript extension for Zed
 
-Adds [Vibescript](https://github.com/mgomes/vibescript) language support to [Zed](https://zed.dev), including syntax highlighting and LSP integration.
+Adds [Vibescript](https://github.com/xipkit/vibescript) language support to [Zed](https://zed.dev), including syntax highlighting and LSP integration.
 
 ## Features
 
@@ -11,7 +11,15 @@ Adds [Vibescript](https://github.com/mgomes/vibescript) language support to [Zed
 
 ## Prerequisites
 
-LSP features require the `vibes` binary on your `PATH`. Install it from the [Vibescript repo](https://github.com/mgomes/vibescript).
+Supports the Rust implementation of Vibescript v0.80.0. Install its CLI and
+language server with:
+
+```sh
+cargo install --git https://github.com/xipkit/vibescript --tag v0.80.0 vibes
+```
+
+Add Cargo's bin directory (`~/.cargo/bin` by default) to your editor's `PATH`.
+The server command remains `vibes lsp`. Replace any path to the retired Go binary.
 
 ## Development
 
@@ -22,3 +30,15 @@ zed: Install Dev Extension
 ```
 
 Then select this repo's directory.
+
+The grammar pin tracks tree-sitter-vibescript 0.80.0. Vendored queries cover the
+Rust language's static types, aliases, enums and brace blocks, including locals,
+indentation, folding and outlines.
+
+Validate a local grammar checkout with `python3 scripts/check-queries.py
+/path/to/tree-sitter-vibescript` after running `npm ci` there. Build the extension
+with `CARGO_BUILD_JOBS=3 cargo build --target wasm32-wasip1`.
+
+The query check also verifies that shared highlighting, injection, folding and
+locals queries match the grammar checkout. The grammar's locals tests cover
+yielded values, splats, shorthand arguments and every direct identifier position.

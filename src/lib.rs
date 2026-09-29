@@ -14,7 +14,7 @@ impl zed::Extension for VibescriptExtension {
     ) -> Result<zed::Command> {
         let vibes_path = worktree
             .which("vibes")
-            .ok_or("vibes binary not found in PATH")?;
+            .ok_or("Rust vibes binary not found in PATH; install with cargo install --git https://github.com/xipkit/vibescript --tag v0.80.0 vibes")?;
         Ok(zed::Command {
             command: vibes_path,
             args: vec!["lsp".into()],
